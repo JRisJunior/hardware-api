@@ -3,3 +3,6 @@ GET http://localhost:3000/mouses.json
 
 ###
 POST http://localhost:3000/mouses.json
+
+###
+GET http://localhost:3000/mouses/1.json

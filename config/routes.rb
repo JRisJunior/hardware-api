@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/mouses" => "mouses#index"
   post "/mouses" => "mouses#create"
+  get "/mouses/:id" => "mouses#show"
 end

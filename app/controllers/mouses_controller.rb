@@ -14,4 +14,9 @@ class MousesController < ApplicationController
     mouse.save
     render json: mouse.as_json
   end
+
+  def show
+    mouse = Mouse.find_by(id: params[:id]) 
+    render json: mouse.as_json
+  end
 end
