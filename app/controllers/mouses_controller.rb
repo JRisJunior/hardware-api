@@ -6,11 +6,12 @@ class MousesController < ApplicationController
   end
 
   def create
-    mouse = Mouse.save(
+    mouse = Mouse.new(
       brand: params[:brand],
       model: params[:model],
       dpi: params[:dpi]
     )
-    render json: {message: "hello from create"}
+    mouse.save
+    render json: mouse.as_json
   end
 end
